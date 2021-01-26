@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <title>Гостиницы в Седоне</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="index.html">
+                    <img src="img/logo.svg" width="138" height="70" alt="Логотип города Седоны">
+                </a>
+                <ul>
+                    <li><a href="blank.html">Информация</a></li>
+                    <li><a href="blank.html">Фото и видео</a></li>
+                    <li><a href="blank.html">Карта штата</a></li>
+                    <li><a >Гостиницы</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Фильтр гостиниц-->
+            <div class="hotels-filtr">
+                <h2 class="hidden-element">Выбор гостиницы</h2>
+                <form action="https://echo.htmlacademy.ru" method="get">
+                    <!--Выбор параметров гостиниц-->
+                    <fieldset>
+                        <legend>Инфраструктура</legend>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="swimming pool" id="filter-swimming-pool" checked>
+                                    <label for="filter-swimming-pool">Бассейн</label>    
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="parking" id="filter-parking">
+                                    <label for="filter-parking">Парковка</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="wifi" id="filter-wifi">
+                                    <label for="filter-wifi">Wi-Fi</label>
+                                </li>
+                            </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Тип жилья</legend>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" name="hotels" id="filter-hotels" checked>
+                                    <label for="filter-hotels">Гостиница</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="hotels" id="filter-hotels" checked>
+                                    <label for="filter-hotels">Мотель</label>
+                                </li>
+                                <li> <input type="checkbox" name="hotels" id="filter-hotels" checked>
+                                    <label for="filter-hotels">Аппареаменты</label>
+                                </li>
+                            </ul>
+                    </fieldset>
+                    <!--Блок с выбором цены-->
+                    <div class="price-block">
+                        <p>Стоимость в сутки (Р):</p>
+                        <!--Поля мин-макс цены-->
+                        <div class="price-filter">
+                            <label for="min-price-value">от</label>
+                            <input type="number" name="min-price" id="min-price-value" min="0" value="0">
+                            <label for="max-price-value">до</label>
+                            <input type="number" name="max-price" id="max-price-value" value="3000">
+                        </div>
+                        <br>
+                        <!--FIXME: Слайдер цены. Выяснить как сделать-->
+                        <div>
+                            Здесь должен быть слайдер выбора стоимости
+                        </div>
+                        <br>
+                        <!--Кнопка отправки формы-->
+                        <div>
+                            <button type="submit">Показать</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--Результат фильтрации и сортировка-->
+            <div class="sort-result">
+                <!--Кол-во найденных объектов и методы сортировки-->
+                <div class="sorting-methods">
+                    <p>Найдено: <span>3</span></p>
+                    <p>Сортировка:</p>
+                    <ul>
+                        <li><a href="#">По цене</a></li>
+                        <li><a href="#">По типу</a></li>
+                        <li><a href="#">По рейтингу</a></li>                        </ul>
+                </div>
+                <!--Кнопки сортировки-->
+                <div class="sorting-method-buttons">
+                    <span class="hidden-element">Сортировка по возрастанию</span>
+                    <button type="button">
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                        </svg>                                
+                    </button>
+                    <span class="hidden-element">Сортировка по убыванию</span>
+                    <button type="button">
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 10L0 0H11" fill="#81B3D2"/>
+                        </svg>                                
+                    </button>
+                </div>
+                <!--Вывод результата фильтрации-->
+                <ul class="result-list">
+                    <!--Название, тип отеля, цена, рейтинг-->
+                    <li>
+                        <div class="item-container">
+                            <img src="img/amara-resort.jpg" alt="">
+                            <div class="item-description-container">
+                                <a href="#">Amara Resort & Spa</a>
+                                <div class="item-description">
+                                    <p>Гостиница</p>
+                                    <a>Подробнее</a>
+                                </div>
+                                <div class="item-description">
+                                    <p>От 4000 Р.</p>
+                                    <a>Забронировать</a>
+                                </div>
+                                <div class="item-description-rating">
+                                    <ul class="number-stars">
+                                        <li>
+                                            <!--Звездочки бэкграундом в css???-->
+                                            <span class="hiddn-element">1 звезда</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">2 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">3 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">4 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">5 звезды</span>
+                                        </li>
+                                    </ul>
+                                    <div class="item-rating">
+                                        <p>Рейтинг:<span>8,5</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <img src="img/desert-quail.jpg" alt="">
+                            <div class="item-description-container">
+                                <a href="#">Desert Quail Inn</a>
+                                <div class="item-description">
+                                    <p>Мотель</p>
+                                    <a>Подробнее</a>
+                                </div>
+                                <div class="item-description">
+                                    <p>От 3000 Р.</p>
+                                    <a>Забронировать</a>
+                                </div>
+                                <div class="item-description-rating">
+                                    <ul class="number-stars">
+                                        <li>
+                                            <!--Звездочки бэкграундом в css???-->
+                                            <span class="hiddn-element">1 звезда</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">2 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">3 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">4 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">5 звезды</span>
+                                        </li>
+                                    </ul>
+                                    <div class="item-rating">
+                                        <p>Рейтинг:<span>8,9</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-container">
+                            <img src="img/villas-at-poco-diablo.jpg" alt="">
+                            <div class="item-description-container">
+                                <a href="#">Villas at Poco Diablo</a>
+                                <div class="item-description">
+                                    <p>Апартаменты</p>
+                                    <a>Подробнее</a>
+                                </div>
+                                <div class="item-description">
+                                    <p>От 2000 Р.</p>
+                                    <a>Забронировать</a>
+                                </div>
+                                <div class="item-description-rating">
+                                    <ul class="number-stars">
+                                        <li>
+                                            <!--Звездочки бэкграундом в css???-->
+                                            <span class="hiddn-element">1 звезда</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">2 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">3 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">4 звезды</span>
+                                        </li>
+                                        <li>
+                                            <span class="hiddn-element">5 звезды</span>
+                                        </li>
+                                    </ul>
+                                    <div class="item-rating">
+                                        <p>Рейтинг:<span>9,2</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>            
+        </main>
+        <footer>
+            <div class="visit">
+              <span class="hidden-element">Свяжитесь с нами</span>
+              <ul>
+                <li><a href="#">#visitSEDONA</a></li>
+                <li><a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a></li>
+            </ul>
+            </div>
+            <div class="social-networks">
+              <span class="hidden-element">Мы в соцсетях</span>
+              <!--FIXME: Переделать иконки, оформить через CSS-->
+              <ul>
+                <li><a href="#"><img src="img/twitter-box.svg"></a></li>
+                <li><a href="#"><img src="img/facebook-box.svg"></a></li>
+                <li><a href="#"><img src="img/youtube-box.svg"></a></li>
+              </ul>
+            </div>
+            <div class="html-academy">
+              <span class="hidden-element">Сайт HTML-Academy</span>
+              <span>Website by</span>
+              <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png" alt="Логотип HTML Академии"></a>
+            </div>
+          </footer>
+    </div>
+</body>
+</html>
