@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
   </head>
   <body>
     <div class="wrapper">
       <header>
         <nav>
           <a>
-            <img src="img/logo.svg" width="138" height="70" alt="Логотип города Седоны">
+            <img src="img/main_logo.svg" width="138" height="70" alt="Логотип города Седоны">
           </a>
           <ul>
             <li><a href="blank.html">Информация</a></li>
@@ -22,9 +23,10 @@
       </header>
       <main>
         <section class="main-decription">
-          <img src="img/background_photo.jpg" alt="Горный пейзаж" width="1200">
-          <img src="img/welcome.png" alt="Добро пожаловать в Седону!" width="457">
-          <img src="img/Shape.png" alt="Фигурная рамка">
+          <!--Картинки уйдут в бекграунд CSS-->
+          <img src="img/background_photo.jpg" alt="Горный пейзаж" width="1200" height="509">
+          <img src="img/welcome.png" alt="Добро пожаловать в Седону!" width="457" height="351">
+          <img src="img/Shape.png" alt="Фигурная рамка" width="1200" height="272">
           <h1>
             Седона — небольшой городок в Аризоне,заслуживающий большего!
           </h1>
@@ -44,7 +46,7 @@
                 <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <div class=true-city-img>
-                <img src="img/true_city.jpg" alt="">
+                <img src="img/true_city.jpg" alt="Жилые строения в Седоне." width="800" height="256">
               </div>
             </li>
             <!--Блок рекомедаций-->
@@ -53,21 +55,21 @@
               Блоки жилье, еда, сувкниры сделаны вложенным подсписком-->
               <ul>
                 <li>
-                  <div class="recomendation-icons"><img src="img/accommodation-icon.svg" alt=""></div>
+                  <div class="recomendation-icons"><img src="img/accommodation-icon.svg" alt="" width="75" height="72"></div>
                   <h3>Жильё</h3>
                   <p>Рекомендуем пожить в настоящем<br>
                     мотеле, всё как в кино!
                   </p>
                 </li>
                 <li>
-                  <div class="recomendation-icons"><img src="img/food-icon.svg" alt=""></div>
+                  <div class="recomendation-icons"><img src="img/food-icon.svg" alt="" width="75" height="72"></div>
                   <h3>Еда</h3>
                   <p>Всегда заказывайте фирменный бургер,<br>
                     вы не разочаруетесь!
                     </p>
                 </li>
                 <li>
-                  <div class="recomendation"><img src="img/souvenirs-icon.svg" alt=""></div>
+                  <div class="recomendation"><img src="img/souvenirs-icon.svg" alt="" width="64" height="77"></div>
                   <h3>Сувениры</h3>
                   <p>Не только китайского, но и местного<br>
                     производства!
@@ -87,7 +89,7 @@
                 </p>
               </div>
               <div class="diablo-bridge-img">
-                <img src="img/diablo-bridge.jpg" alt="Мост дьявола в Седоне">
+                <img src="img/diablo-bridge.jpg" alt="Мост природного происхождения в Седоне" width="800" height="256">
               </div>
             </li>
             <!--Блок преимущества-->
@@ -134,7 +136,7 @@
             <div class="modal-window">
               <div class="arrival">
                 <label for="arrival-input">Дата заезда:</label>
-                <input type="text" id="arrival-input" name="arrival-date" placeholder="24 апреля 2017">
+                <input type="text" id="arrival-input" name="arrival-date" value="24 апреля 2017">
                 <button type="button">
                 <span class="hidden-element">Выберите дату заезда</span>
                 <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,7 +147,7 @@
               </div>
               <div class="departure">
                 <label for="departure-input">Дата выезда:</label>
-                <input type="text" id="departure-input" name="departure-date" placeholder="4 июля 2017">
+                <input type="text" id="departure-input" name="departure-date" value="4 июля 2017">
                 <button type="button">
                 <span class="hidden-element">Виберите дату выезда</span>
                 <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,15 +206,15 @@
           <span class="hidden-element">Мы в соцсетях</span>
           <!--FIXME: Переделать иконки, оформить через CSS-->
           <ul>
-            <li><a href="#"><img src="img/twitter-box.svg" alt=""></a></li>
-            <li><a href="#"><img src="img/facebook-box.svg" alt=""></a></li>
-            <li><a href="#"><img src="img/youtube-box.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/twitter-shape.svg" alt="Логотип  твиттер" width="17" height="15"></a></li>
+            <li><a href="#"><img src="img/facebook-box.svg" alt="Логотип  фейсбук" width="12" height="22"></a></li>
+            <li><a href="#"><img src="img/youtube-box.svg" alt="Логотип  ютьюб" width="20" height="16"></a></li>
           </ul>
         </div>
         <div class="html-academy">
           <span class="hidden-element">Сайт HTML-Academy</span>
           <span>Website by</span>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png" alt="Логотип HTML Академии"></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png" alt="Логотип HTML Академии" width="115" height="41"></a>
         </div>
       </footer>
     </div>
