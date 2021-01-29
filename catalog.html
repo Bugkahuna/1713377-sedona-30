@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.ico">
     <title>Гостиницы в Седоне</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
         <header>
             <nav>
                 <a href="index.html">
-                    <img src="img/logo.svg" width="138" height="70" alt="Логотип города Седоны">
+                    <img src="img/main_logo.svg" width="138" height="70" alt="Логотип города Седоны">
                 </a>
                 <ul>
                     <li><a href="blank.html">Информация</a></li>
@@ -22,7 +22,8 @@
             </nav>
         </header>
         <main>
-            <!--Фильтр гостиниц-->
+            <!--Фильтр гостиниц. Картинка уйдет в бекграунд CSS-->
+            <img src="img/catalog-background.jpg" alt="" width="1200" height="217">
             <div class="hotels-filtr">
                 <h2 class="hidden-element">Выбор гостиницы</h2>
                 <form action="https://echo.htmlacademy.ru" method="get">
@@ -52,17 +53,18 @@
                                     <label for="filter-hotels">Гостиница</label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" name="hotels" id="filter-hotels" checked>
-                                    <label for="filter-hotels">Мотель</label>
+                                    <input type="checkbox" name="motels" id="filter-motels" checked>
+                                    <label for="filter-motels">Мотель</label>
                                 </li>
-                                <li> <input type="checkbox" name="hotels" id="filter-hotels" checked>
-                                    <label for="filter-hotels">Аппареаменты</label>
+                                <li>
+                                    <input type="checkbox" name="appartments" id="filter-appartments" checked>
+                                    <label for="filter-appartments">Аппареаменты</label>
                                 </li>
                             </ul>
                     </fieldset>
                     <!--Блок с выбором цены-->
-                    <div class="price-block">
-                        <p>Стоимость в сутки (Р):</p>
+                    <fieldset class="price-block">
+                        <legend>Стоимость в сутки (Р):</legend>
                         <!--Поля мин-макс цены-->
                         <div class="price-filter">
                             <label for="min-price-value">от</label>
@@ -71,16 +73,16 @@
                             <input type="number" name="max-price" id="max-price-value" value="3000">
                         </div>
                         <br>
-                        <!--FIXME: Слайдер цены. Выяснить как сделать-->
-                        <div>
-                            Здесь должен быть слайдер выбора стоимости
+                        <!--Слайдер цены.-->
+                        <div class="slider-price">
+                            <input type="range" min="1" max="10000" value="3000" class="slider" id="myRange">
                         </div>
                         <br>
                         <!--Кнопка отправки формы-->
                         <div>
                             <button type="submit">Показать</button>
                         </div>
-                    </div>
+                    </fieldset>
                 </form>
             </div>
             <!--Результат фильтрации и сортировка-->
@@ -114,7 +116,7 @@
                     <!--Название, тип отеля, цена, рейтинг-->
                     <li>
                         <div class="item-container">
-                            <img src="img/amara-resort.jpg" alt="">
+                            <img src="img/amara-resort.jpg" alt="Территория отеля Amara Resort & Spa" width="135" height="90">
                             <div class="item-description-container">
                                 <a href="#">Amara Resort & Spa</a>
                                 <div class="item-description">
@@ -141,7 +143,7 @@
                                             <span class="hiddn-element">4 звезды</span>
                                         </li>
                                         <li>
-                                            <span class="hiddn-element">5 звезды</span>
+                                            <span class="hiddn-element">5 звезд</span>
                                         </li>
                                     </ul>
                                     <div class="item-rating">
@@ -153,7 +155,7 @@
                     </li>
                     <li>
                         <div class="item-container">
-                            <img src="img/desert-quail.jpg" alt="">
+                            <img src="img/desert-quail.jpg" alt="Здание мотеля Desert Quall Inn" width="135" height="90">
                             <div class="item-description-container">
                                 <a href="#">Desert Quail Inn</a>
                                 <div class="item-description">
@@ -180,7 +182,7 @@
                                             <span class="hiddn-element">4 звезды</span>
                                         </li>
                                         <li>
-                                            <span class="hiddn-element">5 звезды</span>
+                                            <span class="hiddn-element">5 звезд</span>
                                         </li>
                                     </ul>
                                     <div class="item-rating">
@@ -192,7 +194,7 @@
                     </li>
                     <li>
                         <div class="item-container">
-                            <img src="img/villas-at-poco-diablo.jpg" alt="">
+                            <img src="img/villas-at-poco-diablo.jpg" alt="Лужайка и апартаменты Villas at Poco Diablo" width="135" height="90">
                             <div class="item-description-container">
                                 <a href="#">Villas at Poco Diablo</a>
                                 <div class="item-description">
@@ -219,7 +221,7 @@
                                             <span class="hiddn-element">4 звезды</span>
                                         </li>
                                         <li>
-                                            <span class="hiddn-element">5 звезды</span>
+                                            <span class="hiddn-element">5 звезд</span>
                                         </li>
                                     </ul>
                                     <div class="item-rating">
@@ -238,21 +240,21 @@
               <ul>
                 <li><a href="#">#visitSEDONA</a></li>
                 <li><a href="tel:+74956660166">ТЕЛ: +7(495) 666-01-66</a></li>
-            </ul>
+              </ul>
             </div>
             <div class="social-networks">
               <span class="hidden-element">Мы в соцсетях</span>
               <!--FIXME: Переделать иконки, оформить через CSS!-->
               <ul>
-                <li><a href="#"><img src="img/twitter-box.svg"></a></li>
-                <li><a href="#"><img src="img/facebook-box.svg"></a></li>
-                <li><a href="#"><img src="img/youtube-box.svg"></a></li>
+                <li><a href="#"><img src="img/twitter-shape.svg" alt="Логотип твиттер" width="17" height="15">></a></li>
+                <li><a href="#"><img src="img/fb-shape.svg" alt="Логотип фейсбук" width="12" height="22"></a></li>
+                <li><a href="#"><img src="img/youtube-shape.svg" alt="Логотип ютьюб" width="20" height="16"></a></li>
               </ul>
             </div>
             <div class="html-academy">
               <span class="hidden-element">Сайт HTML-Academy</span>
               <span>Website by</span>
-              <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png" alt="Логотип HTML Академии"></a>
+              <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png" alt="Логотип HTML Академии" width="115" height="41"></a>
             </div>
           </footer>
     </div>
