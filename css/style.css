@@ -1,0 +1,370 @@
+    /*Connect fonts*/
+
+@font-face {
+  font-family: "PTSans";
+  src: local("PTSans"), url("../fonts/PTSans.woff2") format("woff2"), url("../fonts/PTSans.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: local("PTSans-Bold"), url("../fonts/PTSans-Bold.woff2") format("woff2"), url("../fonts/PTSans-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+
+    /*Variables*/
+
+:root{
+  --basic-black: #000000;
+  --opacity-black: rgba(0,0,0,0.3);
+  --basic-white: #ffffff;
+  --opacity-white: rgba(255,255,255,0.3);
+  --main-color: #81B3D2;
+  --main-background: #F2F2F2;
+  --main-color_hover: #669EC0;
+  --main-color_active: #5496BD;
+  --dark-description: #333333;
+  --light-description-background: #eeeeee;
+  --basic-dark: #766357;
+  --bacic-dark_hover: #604E43;
+  --basic-dark_active: #503E33;
+  --button-plus-minus: #A9A9A9;
+  --button-up-down: #CACACA;
+  --hover-field: #EBEBEB;
+  --focus-field: #E5E5E5;
+  --dark_disabled: #6A6A6A;
+
+}
+
+
+
+    /*Global*/
+
+.page-body{
+  margin: 0;
+  padding: 0;
+  font-family: "PTSans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: var(--main-background) ;
+  color: var(--dark-description);
+  }
+
+.page-body a{
+  text-decoration: none;
+}
+
+.page-body img{
+  max-width: 100%;
+  max-height: auto;
+}
+
+.page-container{
+  max-width: 1200px;
+  min-width: 768px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+    /*header*/
+
+.main-navigation{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.site-navigation{
+  list-style: none;
+}
+
+.site-navigation a:not([href]) {
+  color: var(--basic-dark);
+}
+
+.site-navigation a{
+  color: var(--basic-black)
+}
+
+.site-navigation a:hover{
+  color: var(--main-color);
+}
+
+.site-navigation a:focus{
+  color: var(--opacity-black);
+}
+
+
+    /*Main-description*/
+
+.main-container{
+  text-align: center;
+}
+
+.main-decription h1{
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.main-decription h2{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+}
+
+
+
+    /*Features*/
+
+.features__list,
+.recomendation__list{
+  list-style: none;
+}
+
+.features__item{
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-description-background);
+}
+
+.features__item_advanced{
+  background-color: var(--main-color);
+}
+
+.features__title,
+.recomendation__title{
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  text-align: center;
+}
+
+.features__number{
+  padding: 0;
+}
+
+.features__text{
+  padding: 0;
+}
+
+.features__title_advanced,
+.features__number_advanced,
+.features__text_advanced{
+  color: var(--basic-white);
+}
+
+.recomendation__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--basic-white);
+}
+
+.recomendation__description{
+  min-height: 330px;
+  padding-top: 160px;
+}
+
+.recomendation__description_hotel{
+  background: url(../img/accommodation-icon.svg) ;
+  background-repeat: no-repeat;
+  background-position: 50% 60px;
+}
+
+.recomendation__description_food{
+  background: url(../img/food-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 60px;
+}
+
+.recomendation__description_souvenirs{
+  background: url(../img/souvenirs-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 60px;
+}
+
+
+    /* Booking*/
+
+.booking__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  color: var(--basic-black);
+}
+
+.booking__offer{
+    line-height: 24px;
+}
+
+
+    /*Button "Поиск гостиницы"*/
+
+.booking__button{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  border: 0;
+}
+
+.booking__button__switch{
+  width: 568px;
+  height: 86px;
+  background-color: var(--basic-dark);
+}
+
+.booking__button__switch:hover{
+  background-color: var(--bacic-dark_hover);
+}
+
+.booking__button__switch:active{
+  color: var(--opacity-basic-white);
+  background-color: var(--basic-dark_active);
+}
+
+.booking__button__switch:focus{
+  outline: none;
+
+}
+
+    /*Form*/
+
+.search-form__container{
+  margin: 0 auto;
+  width: 568px;
+  height: 395px;
+  background-color: var(--basic-white);
+}
+
+.search-form__label,
+.counter__label {
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.search-form__input{
+
+  width: 346px;
+  height: 38px;
+  color: var(--basic-black);
+  font-weight: bold;
+  background-color: var(--main-background);
+  border: 0;
+}
+
+.counter__input{
+  color: var(--basic-black);
+  font-weight: bold;
+  background-color: var(--main-background);
+  border: 0;
+}
+
+.booking__button_find{
+  width: 458px;
+  height: 58px;
+  background-color: var(--main-color);
+}
+
+
+.booking__button_find:hover{
+  background-color: var(--main-color_hover);
+}
+
+.booking__button_find:active{
+  color: var(--opacity-white);
+  background-color: var(--main-color_active);
+}
+
+.booking__button_find:focus{
+  outline: none;
+}
+
+.visit{
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.visit a{
+  color: var(--basic-black);
+}
+
+.visit__list{
+  list-style: none;
+}
+
+.social-networks__list{
+  list-style: none;
+}
+
+.social-networks__item{
+  background-color: transparent;
+  position: relative;
+}
+
+.social-networks__link{
+  display: flex;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.social-networks__link:hover{
+  background-color: var(--main-color_hover);
+}
+
+.social-networks__link:active{
+  color: var(--opacity-white);
+  background-color: var(--main-color_active);
+}
+
+.social-networks__link path{
+  fill: var(--basic-white);
+}
+
+.social-networks__link path:active{
+  fill: var(--opacity-white);
+}
+
+.copyright__site{
+  color: var(--basic-black);
+  line-height: 26px;
+}
+
+.copyright__link path,
+.copyright__link rect{
+  fill: var(--basic-black)
+}
+
+.copyright__link path:hover,
+.copyright__link rect:hover{
+  fill: var(--main-color_hover);
+}
+
+.copyright__link path:active,
+.copyright__link rect:active{
+  fill: var(--opacity-black);
+}
+
+
+.hidden-element{
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
