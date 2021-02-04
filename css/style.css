@@ -1,6 +1,6 @@
-    /*Connect fonts*/
+ /*Connect fonts*/
 
-@font-face {
+ @font-face {
   font-family: "PTSans";
   src: local("PTSans"), url("../fonts/PTSans.woff2") format("woff2"), url("../fonts/PTSans.woff") format("woff");
   font-style: normal;
@@ -37,6 +37,7 @@
   --hover-field: #EBEBEB;
   --focus-field: #E5E5E5;
   --dark_disabled: #6A6A6A;
+  --dark-rating: #666666;
 
 }
 
@@ -368,3 +369,277 @@
    top: -9999px;
    left: -9999px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*CATALOG.HTML*/
+
+.page-body_catalog{
+  background-color: var(--basic-white);
+}
+
+
+ .main-catalog-container {
+  text-align: left;
+}
+
+.hotels-filtr {
+  background: url(../img/catalog-background.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--main-color);
+  min-height: 217px;
+
+}
+
+.options,
+.residence,
+.price {
+  display: block;
+  border:none;
+  color: var(--basic-white);
+}
+
+.options__title,
+.residence__title,
+.price__title  {
+font-weight: bold;
+font-size: 16px;
+line-height: 21px;
+
+}
+
+.options__list,
+.residence__list {
+  list-style: none;
+  padding: 0;
+}
+
+    /*checkboxes*/
+
+.options__label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.options__label-check {
+  padding-left: 2.5em;
+}
+
+.option__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.option__checkbox {
+  position: absolute;
+  margin-top: -0.1em;
+  margin-left: -2.5em;
+  width: 1.65em;
+  height: 1.65em;
+  background: url(../img/checkbox-off.svg);
+}
+
+.option__input:checked +.option__checkbox {
+  background: url(../img/checkbox-on.svg);
+}
+
+.option__input:disabled +.option__checkbox {
+  background: url(../img/dsbld_checkbox-off.svg);
+}
+
+
+    /*batton "show"*/
+
+    .show-button {
+      min-width: 137px;
+      font-size: 14px;
+      line-height: 21px;
+      box-sizing: border-box;
+      text-transform: inherit;
+      border: 2px solid var(--basic-white);
+      border-radius: 2px;
+      background-color: transparent;
+      color: var(--basic-white);
+    }
+
+    .show-button:hover {
+      background-color: var(--basic-white);
+      color: var(--basic-black);
+    }
+
+        /*Sorting*/
+
+.sorting__result {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black)
+}
+
+.sorting_method {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black)
+}
+
+.sorting__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting__list a:not([href]) {
+  color: var(--main-color);
+  border: none;
+}
+.sorting__list a {
+  color: var(--opacity-black);
+  border-bottom: 1px dotted var(--main-color);
+}
+
+.sorting__list a:hover {
+  color: var(--main-color);
+  border-bottom: none;
+}
+
+.sorting__list a:active {
+  color: var(--basic-black);
+  border: none;
+}
+
+
+
+
+    /*Sorting buttons*/
+
+.sorting-button path {
+  fill: var(--opacity-black);
+}
+
+.sorting-button path:hover {
+  fill: var(--basic-black);
+}
+
+.sorting-button path:active {
+  fill: var(--main-color);
+}
+
+
+
+
+
+
+
+      /* Hotels List*/
+
+.result__list{
+  list-style: none;
+}
+
+.result__title {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
+.button-link{
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+
+}
+
+.button-link-detail {
+  max-width: 110px;
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--main-color);
+}
+
+.button-link-detail:hover {
+  background-color: var(--main-color_hover);
+}
+
+.button-link-detail:active {
+  color: var(--opacity-basic-white);
+  background-color: var(--main-color_active);
+}
+
+.button-link-detail:focus {
+  outline: none;
+}
+
+
+
+.button-link-reservation{
+  max-width: 142px;
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--basic-dark);
+}
+
+.button-link-reservation:hover {
+  background-color: var(--bacic-dark_hover);
+}
+
+.button-link-reservation:active {
+  color: var(--opacity-basic-white);
+  background-color: var(--basic-dark_active);
+}
+
+.button-link-reservation:focus {
+  outline: none;
+}
+
+
+.rating-value{
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  /*font-size: 14px;
+  line-height: 21px;*/
+  max-width: 110px;
+  text-align: center;
+  color: var(--dark-rating);
+  background-color: var(--main-background);
+
+}
+
+.star__list{
+  list-style: none;
+}
+
+
+.star__item {
+  display: inline-block;
+  background: url(../img/star.svg);
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 17px;
+  margin-left: 5px;
+ }
