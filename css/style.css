@@ -44,6 +44,9 @@
 
 
     /*Global*/
+.page {
+  height: 100%;
+}
 
 .page-body{
   margin: 0;
@@ -53,8 +56,13 @@
   line-height: 21px;
   text-transform: uppercase;
   font-weight: normal;
-  background-color: var(--main-background) ;
+  background-color: var(--main-background);
   color: var(--dark-description);
+  min-height: 100%;
+  display:grid;
+  grid-template-rows: min-content 1fr min-content;
+
+
   }
 
 .page-body a{
@@ -63,26 +71,79 @@
 
 .page-body img{
   max-width: 100%;
-  max-height: auto;
+  max-height: 100%;
 }
 
+
 .page-container{
-  max-width: 1200px;
   min-width: 768px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+  box-sizing: content-box;
+
 }
 
     /*header*/
 
+.main-header {
+  position: relative;
+
+}
+
+.main-navigation-bar{
+  margin: 0;
+  padding: 0;
+  width: 1200px;
+  position: absolute;
+}
+
+.main-navigation-wrapper {
+  width: 1055px;
+  margin: 0 auto;
+}
+
+
 .main-navigation{
+  display:grid;
+  font-weight: bold;
   font-size: 14px;
   line-height: 26px;
-  font-weight: bold;
+
+}
+
+
+.main-logo {
+  justify-self:center;
 }
 
 .site-navigation{
+  display: grid;
+  grid-template-columns: 1fr 300px 300px  1fr;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.site-navigation__info {
+  grid-column: 1/2;
+  text-align: left;
+}
+
+.site-navigation__photo {
+  grid-column: 2/3;
+  text-align: left;
+}
+
+.site-navigation__map {
+  grid-column: 3/4;
+  text-align: right;
+}
+
+.site-navigation__hotel {
+  grid-column: 4/5;
+  text-align: right;
 }
 
 .site-navigation a:not([href]) {
@@ -108,6 +169,14 @@
   text-align: center;
 }
 
+.welcome-wrapper{
+  width: 100%;
+  min-height: 508px;
+  padding-top: 76px;
+  background: url(../img/mask.svg) no-repeat 0 453px, url(../img/background_photo.jpg) no-repeat;
+
+}
+
 .main-decription h1{
   font-weight: bold;
   font-size: 21px;
@@ -125,20 +194,79 @@
 
     /*Features*/
 
-.features__list,
-.recomendation__list{
+.features__list{
+  display: grid;
+  /*grid-template-rows: 256px 300px 256px 256px;*/
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
-}
-
-.features__item{
   margin: 0;
   padding: 0;
-  background-color: var(--light-description-background);
 }
 
+    /*TRUE CITY*/
 .features__item_advanced{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/-1;
   background-color: var(--main-color);
 }
+
+
+.features__description_advanced{
+grid-column: 1/2;
+}
+
+.features__image{
+grid-column: 2/-1;
+line-height: 0;
+}
+
+.features__image-bridge{
+  line-height: 0;
+}
+
+}
+
+
+    /*БЛОК РЕКОМЕНДАЦИИ*/
+
+
+.recomendation__hotel{
+  grid-column: 1/2;
+  background: url(../img/accommodation-icon.svg) ;
+  background-repeat: no-repeat;
+  background-position: 50% 60px;
+}
+
+.recomendation__food{
+  grid-column: 2/3;
+  background: url(../img/food-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 60px;
+}
+
+.recomendation__souvenir{
+  grid-column: 3/4;
+  background: url(../img/souvenirs-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 60px;
+}
+
+/*БЛОК ПЛОЩАДЬ-ДОРОГА-ТУРИСТЫ*/
+/*
+.features__item-area{
+  grid-column: 1/2;
+}
+
+.features__item-road{
+  grid-column: 2/3;
+}
+
+.features__item-tourist{
+  grid-column: 3/4;
+}
+*/
+
 
 .features__title,
 .recomendation__title{
@@ -149,48 +277,39 @@
   text-align: center;
 }
 
-.features__number{
+.features__number {
   padding: 0;
 }
 
-.features__text{
+.features__text {
   padding: 0;
 }
 
 .features__title_advanced,
 .features__number_advanced,
-.features__text_advanced{
+.features__text_advanced {
   color: var(--basic-white);
 }
 
-.recomendation__list{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background-color: var(--basic-white);
-}
 
 .recomendation__description{
   min-height: 330px;
   padding-top: 160px;
 }
 
-.recomendation__description_hotel{
-  background: url(../img/accommodation-icon.svg) ;
-  background-repeat: no-repeat;
-  background-position: 50% 60px;
+
+
+
+
+
+
+
+.features__image-bridge {
+  grid-column: 1/3;
 }
 
-.recomendation__description_food{
-  background: url(../img/food-icon.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 60px;
-}
-
-.recomendation__description_souvenirs{
-  background: url(../img/souvenirs-icon.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 60px;
+.features__description-bridge {
+  grid-column: 3/4;
 }
 
 
@@ -290,6 +409,14 @@
 
 .booking__button_find:focus{
   outline: none;
+}
+
+
+
+    /*FOOTER*/
+
+.page-footer {
+  background-color: coral;
 }
 
 .visit{
