@@ -11,7 +11,7 @@
     <div class="page-container">
       <header class="main-header">
         <nav class="main-navigation">
-          <a class="main-logo">
+          <a href="index.html" class="main-logo">
             <img src="img/main_logo.svg" width="138" height="70" alt="Логотип города Седоны">
           </a>
           <!--
@@ -33,11 +33,11 @@
           <div class="welcome-wrapper">
             <img class="welcome-image" src="img/welcome.png" width="457px" height="351px" alt="Welcome to Sidona">
           </div>
-          <h1>
+          <h1 class="main-titel">
             Седона — небольшой городок в Аризоне,<br>
             заслуживающий большего!
           </h1>
-          <h2>
+          <h2 class="main-subtitel">
             Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
           </h2>
         </section>
@@ -114,7 +114,7 @@
             </li>
             <!--Красивая дорога-->
             <li class="features__item features__item-road">
-              <div>
+              <div class=>
                 <h3 class="features__title">красивая<br>
                   дорога
                 </h3>
@@ -125,24 +125,31 @@
               </div>
             </li>
             <!--Блок мало туристов-->
-            <li class="features__item">
-              <div>
-                <h3 class="features__title features__item-tourist">мало<br>
+            <li class="features__item features__item-tourist">
+              <!--<div class="item-wrapper">-->
+                <h3 class="features__title">мало<br>
                   туристов
                 </h3>
                 <p class="features__number">– №5 –</p>
                 <p class="features__text">большинство едет в гранд каньон<br>
                   и толпится там
                 </p>
-              </div>
+              <!--</div>-->
             </li>
           </ul>
         </section>
         <!--Секция поиска гостиницы-->
         <section>
+          <div class="booking__wrapper">
+            <h2 class="visually-hidden">Форма поиска гостиницы</h2>
+            <p class="booking__title">Заинтересовались?</p>
+            <p class="booking__offer">Укажите предполагаемые даты поездки,<br>
+              и мы покажем вам лучшие предложения гостиниц в седоне
+            </p>
+          </div>
           <form action="https://echo.htmlacademy.ru" class="search-form" method="post">
             <button class="search-form-head" tabindex="0">Поиск гостиницы в седоне</button>
-            <div class="form-input-blocks modal-show">
+            <div class="form-input-blocks">
               <div class="arrival-date form-input-block">
                 <label for="arrival-input" class="form-label">Дата заезда:</label>
                 <input type="text" id="arrival-input" name="arrival-date" placeholder="24 Апреля 2017" class="form-input form-input-date">
@@ -163,22 +170,22 @@
                 <div class="amount-people-block">
                   <label for="adult" class="form-label amount-form-label">Взрослые:</label>
                   <button type="button" class="amount-people-button input-button-minus" id="amountAdultMinus"><span class="visually-hidden">Увеличить количество взрослых</span></button>
-                  <input type="number" min="1" max="10" name="adult" value="2" id="adult" class="form-input form-input-num">
+                  <input  class="form-input form-input-num" type="number" min="1" name="adult" value="2" id="adult">
                   <button type="button" class="amount-people-button input-button-plus" id="amountAdultPlus"><span class="visually-hidden">Увеличить количество взрослых</span></button>
                 </div>
                 <div class="amount-people-block">
                   <label for="children" class="form-label amount-form-label">Дети:</label>
                   <button type="button" class="amount-people-button input-button-minus" id="amountChildrenMinus"><span class="visually-hidden">Уменьшить количество детей</span></button>
-                  <input type="number" min="0" max="10" name="children" value="0" id="children" class="form-input form-input-num">
+                  <input class="form-input form-input-num" type="number" min="0" max="10" name="children" value="0" id="children">
                   <button type="button" class="amount-people-button input-button-plus" id="amountChildrenPlus"><span class="visually-hidden">Увеличить количество детей</span></button>
                 </div>
               </div>
               <div class="submit-block">
-                <button type="submit" class="submit-form-button">Найти</button>
+                <button class="submit-form-button" type="submit" class="submit-form-button">Найти</button>
               </div>
             </div>
           </form>
-          <div class=yamap>
+          <div class="yamap">
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6f5ec5a611d8d69c16b2a85e19e628a006422569a68642ac69e5a1d5dbdb19f0&amp;source=constructor" width="1200" height="475" frameborder="0"></iframe>
           </div>
         </section>
