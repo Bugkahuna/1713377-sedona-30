@@ -14,7 +14,7 @@
   <div class="page-container">
     <header>
       <nav>
-        <a><img class="main-logo" src="img/logo.svg" width="138" height="70" alt="Логотип Седоны"></a>
+        <a><img class="main-logo" src="img/main_logo.svg" width="138" height="70" alt="Логотип Седоны"></a>
         <ul class="site-navigation">
           <li><a class="site-navigation__link" href="#">Информация</a></li>
           <li><a class="site-navigation__link" href="#">Фото и видео</a></li>
@@ -36,7 +36,6 @@
                 <input class="option__input visually-hidden" id="filtr-pool" type="checkbox" name="hotels" checked>
                 <label for="filtr-pool" class="options__label options__label-check">Бассейн</label>
               </li>
-              </li>
               <li>
                 <input id="filtr-parking" class="option__input visually-hidden" type="checkbox" name="parking">
                 <label for="filtr-parking" class="options__label options__label-parking">Парковка</label>
@@ -54,7 +53,6 @@
                 <input class="option__input visually-hidden" id="filtr-hotel" type="checkbox" name="hotel" checked>
                 <label for="filtr-hotel" class="options__label options__label-check">Гостиница</label>
               </li>
-              </li>
               <li>
                 <input class="option__input visually-hidden" id="filtr-motel" type="checkbox" name="motel" checked>
                 <label for="filtr-motel" class="options__label options__label-check">Мотель</label>
@@ -66,30 +64,30 @@
             </ul>
           </fieldset>
           <!--Блок с выбором цены-->
-          <fieldset class="options ">
-            <legend class="options__title">Стоимость в сутки (Р):</legend>
-            <!--Поля мин-макс цены-->
-            <div class="price-container">
-              <label class="price__label">
-                <input class="price__input" type="number" name="min-price" min="0" value="0">
-                <span class="price_min max">от 0</span>
-              </label>
-              <label class="price__label">
-                <input class="price__input" type="number" name="max-price" value="3000">
-                <span class="price_min max">до 3000</span>
-              </label>
+          <fieldset class="filter-item">
+            <legend class="filter__title">Стоимость в сутки (Р):</legend>
+            <div class="range-filter">
+              <div class="price-controls">
+                <p>от&nbsp;<span>0</span></p>
+                <p>до&nbsp;<span>3000</span></p>
+                <label class="visually-hidden">
+                  <input type="text" name="min-price" value="0">
+                </label>
+                <label class="visually-hidden">
+                  <input type="text" name="max-price" value="3000">
+                </label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
             </div>
-            <br>
-            <!--Слайдер цены.-->
-            <div class="slider-price">
-              <label>
-                <input type="range" min="1" max="10000" value="3000" class="slider" id="myRange">
-              </label>
-            </div>
-            <br>
             <!--Кнопка отправки формы-->
-            <div>
-              <button class="show-button" type="submit">Показать</button>
+            <div class="price-button-wrapper">
+              <button class="price-button" type="submit">Показать</button>
             </div>
           </fieldset>
         </form>

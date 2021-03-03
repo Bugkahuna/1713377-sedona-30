@@ -776,6 +776,11 @@ padding: 0;
   display: block;
 }
 
+.option__input:disabled:checked + .options__label::after {
+  background-image: url("../img/dsbld_checkbox-on.png");
+  display: block;
+}
+
 
 /*----------SLIDER----------*/
 
@@ -1026,11 +1031,6 @@ padding: 0;
   column-gap: 6px;
 }
 
-
-.result-button-detail {
-  background-color: var(--main-color);
-}
-
 .result-button {
   display: block;
   color: var(--basic-white);
@@ -1042,15 +1042,38 @@ padding: 0;
   color: var(--basic-white);
 }
 
-
 .result-description-block p {
   text-align: left;
   margin: 0 0 13px 0;
   padding:0px;
 }
 
+.result-button-detail {
+  background-color: var(--main-color);
+}
+
+.result-button-detail:hover,
+.result-button-detail:focus {
+  background-color: var(--main-color_hover);
+}
+
+.result-button-detail:active {
+  color: rgba(255,255,255,0.3);
+  background-color: var(--main-color_active);
+}
+
 .result-button-booking {
   background-color: var(--basic-dark);
+}
+
+.result-button-booking:hover,
+.result-button-booking:focus {
+  background-color: var(--bacic-dark_hover);
+}
+
+.result-button-booking:active {
+  color: rgba(255,255,255,0.3);
+  background-color: var(--basic-dark_active);
 }
 
 .item-descr-rating {
@@ -1091,59 +1114,6 @@ padding: 0;
 .display-none {
   display: none;
 }
-
-.button-link{
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-
-}
-
-.button-link-detail {
-  max-width: 110px;
-  text-align: center;
-  color: var(--basic-white);
-  background-color: var(--main-color);
-}
-
-.button-link-detail:hover {
-  background-color: var(--main-color_hover);
-}
-
-.button-link-detail:active {
-  color: var(--opacity-basic-white);
-  background-color: var(--main-color_active);
-}
-
-.button-link-detail:focus {
-  outline: none;
-}
-
-
-
-.button-link-reservation{
-  max-width: 142px;
-  text-align: center;
-  color: var(--basic-white);
-  background-color: var(--basic-dark);
-}
-
-.button-link-reservation:hover {
-  background-color: var(--bacic-dark_hover);
-}
-
-.button-link-reservation:active {
-  color: var(--opacity-basic-white);
-  background-color: var(--basic-dark_active);
-}
-
-.button-link-reservation:focus {
-  outline: none;
-}
-
 
 .rating-value{
   display: block;
