@@ -14,7 +14,7 @@
   <div class="page-container">
     <header>
       <nav>
-        <a><img class="main-logo" src="img/main_logo.svg" width="138" height="70" alt="Логотип Седоны"></a>
+        <a href="index.html"><img class="main-logo" src="img/main_logo.svg" width="138" height="70" alt="Логотип Седоны"></a>
         <ul class="site-navigation">
           <li><a class="site-navigation__link" href="#">Информация</a></li>
           <li><a class="site-navigation__link" href="#">Фото и видео</a></li>
@@ -59,7 +59,7 @@
               </li>
               <li>
                 <input class="option__input visually-hidden" id="filtr-appartment" type="checkbox" name="appartment" checked>
-                <label for="filtr-appartment" class="options__label options__label-check">Аппартаменты</label>
+                <label for="filtr-appartment" class="options__label options__label-check">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -68,14 +68,14 @@
             <legend class="filter__title">Стоимость в сутки (Р):</legend>
             <div class="range-filter">
               <div class="price-controls">
-                <p>от&nbsp;<span>0</span></p>
-                <p>до&nbsp;<span>3000</span></p>
-                <label class="visually-hidden">
-                  <input type="text" name="min-price" value="0">
+                <label class="price-value">от&nbsp;<input class="price-min" type="text" name="min-price" value="0"></label>
+                <label class="price-value price-value-max">до&nbsp;<input class="price-min" type="text" name="min-price" value="3000"></label>
+                <label class="price__label-min visually-hidden">
+                <!--  <input class="price-min" type="text" name="min-price" value="0">
                 </label>
                 <label class="visually-hidden">
-                  <input type="text" name="max-price" value="3000">
-                </label>
+                  <input class="price__label-maxf price-max" type="text" name="max-price" value="3000">
+                </label>-->
               </div>
               <div class="range-controls">
                 <div class="scale">
@@ -208,7 +208,7 @@
         </ul>
       </div>
     </main>
-    <footer class="footer-catalog">
+    <footer class="main-footer footer-catalog">
       <h2 class="visually-hidden">Свяжитесь с нами</h2>
       <div class="contact-wrapper">
         <div class="contact">
