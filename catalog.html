@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/min_style.css">
     <link rel="icon" href="favicon.ico">
     <title>Гостиницы в Седоне</title>
   </head>
   <body class="page-body">
-    <div class="page-container">
+    <!--<div class="page-container">-->
       <header>
         <nav>
           <a href="index.html"><img class="main-logo" src="img/main_logo.svg" width="138" height="70" alt="Логотип Седоны"></a>
@@ -28,7 +28,7 @@
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
             <!--Выбор параметров гостиниц-->
             <fieldset class="options infrastructure">
-              <legend class="options__title">Инфраструктура</legend>
+              <legend class="options__title">Инфраструктура:</legend>
               <ul class="options__list">
                 <li>
                   <input class="option__input visually-hidden" id="filtr-pool" type="checkbox" name="hotels" checked disabled>
@@ -45,7 +45,7 @@
               </ul>
             </fieldset>
             <fieldset class="options">
-              <legend class="options__title">Тип жилья</legend>
+              <legend class="options__title">Тип жилья:</legend>
               <ul class="options__list">
                 <li>
                   <input class="option__input visually-hidden" id="filtr-hotel" type="checkbox" name="hotel" checked>
@@ -117,7 +117,7 @@
             <!--Название, тип отеля, цена, рейтинг-->
             <li class="result-item">
               <div class="result-wrapper">
-                <img class="hotel-img" src="img/amara-resort.jpg" alt="Amara hotel" width="135">
+                <img class="hotel-img" src="img/amara-resort.jpg" alt="Amara hotel" width="135" height="90">
                 <div class="result-description">
                   <div class="result-description-wrapper">
                     <a href="#" class="result-title">Amara Resort & Spa</a>
@@ -145,7 +145,7 @@
             </li>
             <li class="result-item">
               <div class="result-wrapper">
-                <img class="hotel-img" src="img/desert-quail.jpg" alt="Desert Quail Inn" width="135">
+                <img class="hotel-img" src="img/desert-quail.jpg" alt="Desert Quail Inn" width="135" height="90">
                 <div class="result-description">
                   <div class="result-description-wrapper">
                     <a href="#" class="result-title">Desert Quail Inn</a>
@@ -173,7 +173,7 @@
             </li>
             <li class="result-item">
               <div class="result-wrapper">
-                <img class="hotel-img" src="img/villas-at-poco-diablo.jpg" alt="Villas at Poco Diablo" width="135">
+                <img class="hotel-img" src="img/villas-at-poco-diablo.jpg" alt="Villas at Poco Diablo" width="135" height="90">
                 <div class="result-description">
                   <div class="result-description-wrapper">
                     <a href="#" class="result-title">Villas at Poco Diablo</a>
@@ -233,6 +233,6 @@
         </div>
         </div>
       </footer>
-    </div>
+    <!--</div>-->
   </body>
 </html>
