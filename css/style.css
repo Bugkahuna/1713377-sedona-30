@@ -427,9 +427,10 @@ padding: 0;
 
 .search-button {
   background-color: var(--basic-dark);
-  width: 568px;
-  padding: 0 6px;
-  min-height: 86px;
+  text-decoration: none;
+  line-height: 22px;
+  width: 290px;
+  padding: 31px 139px;
   z-index: 100;
   position: relative;
 }
@@ -1259,6 +1260,8 @@ padding: 0;
   height: 90px;
   overflow: hidden;
   margin-right: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .result-description {
@@ -1305,9 +1308,7 @@ padding: 0;
   display: grid;
   -ms-grid-columns: 110px 6px 142px;
   grid-template-columns: 110px 142px;
-  -webkit-column-gap: 6px;
-     -moz-column-gap: 6px;
-          column-gap: 6px;
+  gap: 6px;
 }
 
 .result-button {
@@ -1325,6 +1326,7 @@ padding: 0;
   margin: 0 0 14px 0;
   padding: 0px;
 }
+
 
 .result-button-detail {
   background-color: var(--main-color);

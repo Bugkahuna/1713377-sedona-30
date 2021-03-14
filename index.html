@@ -100,19 +100,19 @@
             <p class="search__text">Укажите предполагаемые даты поездки,<br>
                и мы покажем вам лучшие предложения гостиниц в седоне
             </p>
-            <button class="button search-button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</button>
+            <a href="#" class="button search-button" type="button">ПОИСК ГОСТИНИЦЫ В седоне</a>
           </div>
           <div class="modal-window  modal-show">
             <form class="booking__form" method="post" action="https://echo.htmlacademy.ru">
               <div class="date-selection">
                 <label class="date-selection__label" for="arrival-input">Дата заезда:</label>
                 <input class="date-selection__input" type="text" name="arrival" id="arrival-input" placeholder="24 апреля 2017">
-                <button class="button_calendar" type="button"></button>
+                <button class="button_calendar" type="button"><span class="visually-hidden">Выберите дату заезда</span></button>
               </div>
               <div class="date-selection">
-                <label class="date-selection__label" for="arrival-input">Дата выезда:</label>
+                <label class="date-selection__label" for="departure-input">Дата выезда:</label>
                 <input class="date-selection__input" type="text" name="departure" id="departure-input" placeholder="4 июля 2017">
-                <button class="button_calendar" type="button"></button>
+                <button class="button_calendar" type="button"><span class="visually-hidden">Выберите дату выезда</span></button>
               </div>
               <div class="guests-wrapper">
                 <div class="guests">
@@ -129,7 +129,7 @@
                   <button class="plus-minus minus plus" type="button"><span class="visually-hidden">Больше детей</span>&nbsp;</button>
                 </div>
               </div>
-              <button class="button find-button" type="submit">Найти</button>
+              <button class="button find-button" type="submit"><span class="visually-hidden">Кнопка найти</span>Найти</button>
             </form>
           </div>
           <div class="yamap">
@@ -169,6 +169,6 @@
         </div>
       </footer>
     <!--</div>-->
-    <script src="../js/booking_form.js"></script>
+    <script src="js/mini_booking_form.js"></script>
   </body>
 </html>
