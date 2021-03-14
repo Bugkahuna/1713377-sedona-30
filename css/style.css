@@ -224,9 +224,6 @@
 /*----------FEATURES----------*/
 
 /*---TRUE CITY---*/
-.features {
-  /*height: 100%;*/
-}
 .features-list {
   list-style: none;
   margin: 0;
@@ -325,24 +322,15 @@
 }
 
 .recomendation-accomodation {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
   background: url("../img/accommodation-icon.svg") no-repeat 50% 60px;
 
 }
 
 .recomendation-food {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
   background: url("../img/food-icon.svg") no-repeat 50% 62px;
 }
 
 .recomendation-souvenirs {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
   background: url("../img/souvenirs-icon.svg") no-repeat 50% 55px;
 }
 
@@ -426,13 +414,17 @@ padding: 0;
 }
 
 .search-button {
-  background-color: var(--basic-dark);
-  text-decoration: none;
-  line-height: 22px;
-  width: 290px;
-  padding: 31px 139px;
-  z-index: 100;
-  position: relative;
+    display: block;
+    background-color: var(--basic-dark);
+    text-decoration: none;
+    height: 86px;
+    width: 568px;
+    margin: 0 auto;
+    padding: 31px 139px;
+    z-index: 100;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .search-button:hover {
